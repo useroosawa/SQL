@@ -1,0 +1,23 @@
+select code as 社員コード, name as 社員名,
+case dpt_code when 10 then 'yes' else 'no'
+end as 総務部
+from tbl_employee
+order by
+code asc;
+
+select code as 社員コード, name as 社員名,
+case dpt_code when 30 then 'yes' else 'no'
+end as 開発部
+from tbl_employee
+order by
+code asc;
+
+select code as 社員コード, name as 社員名,
+birthday as 生年月日,case 
+when birthday < 19750101 then 'ベテラン'
+when birthday < 19800101 then '中堅'
+else '新人'
+end as 技量
+from tbl_employee
+order by 
+code;

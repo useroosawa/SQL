@@ -1,0 +1,8 @@
+select * from tbl_employee
+where dpt_code in (10,20,30);
+
+select * from tbl_employee
+where post_code in (3,4);
+
+select * from tbl_employee
+where manager in (101,102,103,0);

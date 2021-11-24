@@ -1,0 +1,84 @@
+select 
+a.code as dpt_code,
+a.name as dpt_name,
+b.code as emp_code,
+b.name as emp_name
+from 
+tbl_department as a,
+tbl_employee as b
+where a.code = b.dpt_code
+order by 
+a.code,
+b.code;
+
+select 
+a.code as dpt_code,
+a.name as dpt_name,
+COUNT(*) as emp_cnt
+from 
+tbl_department as a,
+tbl_employee as b
+where a.code = b.dpt_code
+GROUP by a.code
+order by 
+a.code;
+
+select 
+b.code as p_code,
+b.name as p_name,
+a.post_code as post_code,
+a.name as emp_name
+from
+tbl_employee as a,
+tbl_post as b
+where b.code = a.post_code
+order by a.post_code;
+
+select 
+b.code as p_code,
+b.name as p_name,
+COUNT(*) as post_cnt
+from
+tbl_employee as a,
+tbl_post as b
+where b.code = a.post_code
+group by 
+b.code
+having post_cnt >= 1
+order by a.post_code;
+
+select 
+a.manager as emp_code,
+b.name as emp_name,
+COUNT(*) as manager_cnt
+from
+tbl_employee as a,
+tbl_employee as b
+where b.code = a.manager
+group by 
+b.code
+having post_cnt >= 1
+order by a.post_code;
+
+select 
+a.club as club,
+COUNT(*) as club
+from 
+players as a,
+players_tmp as b
+where a.club = b.club
+GROUP by a.club
+having a.club like 'リバプール%'
+select 
+name ,club from players 
+where club like 'リバプール%'
+select 
+name ,club from players 
+where club like 'バルセロナ%'
+select 
+name ,club from players 
+where club like 'マンチェスター%'
+select 
+name ,club from players 
+where club like '%トッ%'
+

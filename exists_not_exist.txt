@@ -1,0 +1,20 @@
+select * from tbl_employee
+where code in(
+select emp_code from tbl_salary where salary >= 200000);
+
+select * from tbl_employee as emp
+where exists (select sry.emp_code from 
+tbl_salary as sry
+where emp.code = sry.emp_code
+and sry.salary >= 200000);
+
+select * from tbl_employee as emp
+where not exists (select sry.emp_code from 
+tbl_salary as sry
+where emp.code = sry.emp_code
+and sry.salary >= 200000);
+
+select * from tbl_employee
+where code in (select sry.emp_code from 
+tbl_salary as sry
+where sry.salary between 200000 and 220000);

@@ -1,0 +1,38 @@
+insert into tbl_employee (code,name,birthday,dpt_code,post_code,manager) 
+values (106,'斎藤高志',19820303,20,null,102);
+
+
+insert into tbl_employee (code,name,birthday,dpt_code,post_code,manager) values (106,'フォスター','1983-04-03',20,null,102);
+insert into tbl_employee (code,name,birthday,dpt_code,post_code,manager) values (107,'ハート','1987-04-19',20,null,102);
+insert into tbl_employee (code,name,birthday,dpt_code,post_code,manager) values (108,'フォースター','1988-03-17',20,null,102);
+insert into tbl_employee (code,name,birthday,dpt_code,post_code,manager) values (109,'ジャギエルカ','1982-08-17',20,null,102);
+insert into tbl_employee (code,name,birthday,dpt_code,post_code,manager) values (110,'ジョンソン','1984-08-23',20,null,102);
+insert into tbl_employee (code,name,birthday,dpt_code,post_code,manager) values (111,'ベーンズ','1984-12-11',20,null,102);
+insert into tbl_employee (code,name,birthday,dpt_code,post_code,manager) values (112,'ケーヒル','1985-12-19',20,null,102);
+insert into tbl_employee (code,name,birthday,dpt_code,post_code,manager) values (113,'スモーリング',1989-11-22',20,null,102);
+insert into tbl_employee (code,name,birthday,dpt_code,post_code,manager) values (114,'ジョーンズ',1992-02-21',20,null,102);
+insert into tbl_employee (code,name,birthday,dpt_code,post_code,manager) values (115,'ショー','1995-07-12',20,null,102);
+insert into tbl_employee values (116,'ランパード','1978-06-20',20,null,102);
+insert into tbl_employee values (117,'ジェラード','1980-05-30',20,null,102);
+insert into tbl_employee values (118,'ミルナー','1986-01-04',20,null,102);
+insert into tbl_employee values (119,'ララーナ','1988-05-10',20,null,102);
+insert into tbl_employee values(120,'ヘンダーソン','1990-06-17',20,null,102);
+insert into tbl_employee values (121,'ウィルシャー','1992-01-01',20,null,102);
+insert into tbl_employee values (122,'オクスレードチェンバレン','1993-08-15',20,null,102);
+insert into tbl_employee values (123,'バークリー','1993-12-05',20,null,102);
+insert into tbl_employee values (124,'スターリング','1994-12-08',20,null,102);
+insert into tbl_employee values (125,'ランバート','1982-02-16',20,null,102);
+insert into tbl_employee values (126,'ルーニー','1985-10-24',20,null,102);
+insert into tbl_employee values (127,'スタリッジ','1989-09-01',20,null,102);
+insert into tbl_employee values (128,'ウェルベック','1990-11-26',20,null,102);
+
+insert into tbl_dpt_emp 
+select b.code,b.name,a.code,a.name
+from tbl_employee as a,tbl_department as b
+where a.dpt_code = b.code;
+
+insert into tbl_dpt_emp
+(dpt_code,dpt_name,emp_code,emp_name)
+select a.code,a.name,b.code,b.name
+from tbl_department as a,tbl_employee as b
+where b.dpt_code = a.code;

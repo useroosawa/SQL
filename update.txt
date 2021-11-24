@@ -1,0 +1,13 @@
+update tbl_employee
+set dpt_code = 30,birthday = 19830303
+where code = 106;
+
+update tbl_employee set name = 'スモーリング',
+birthday = '1989-11-22'
+where code = 113;
+
+update tbl_employee set birthday = '1992-02-21'
+where code = 114;
+
+update tbl_employee set birthday = '1993-08-15'
+where code = 122;

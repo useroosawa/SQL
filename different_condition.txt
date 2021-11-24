@@ -1,0 +1,2 @@
+select * from tbl_employee where (dpt_code = 10) and (post_code = 4);
+select * from tbl_employee where (dpt_code = 10) or (post_code = 4);

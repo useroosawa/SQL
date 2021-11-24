@@ -1,0 +1,6 @@
+set autocommit = 0;
+show variables like 'autocommit';
+Start transaction;
+update tbl_employee set name = '田中達也' where code = 104
+rollback;
+commit;

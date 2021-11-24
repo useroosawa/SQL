@@ -1,0 +1,33 @@
+select * from tbl_employee 
+where birthday <= '1975-01-01';
+
+select * from tbl_employee 
+where dpt_code !=(<>) 10;
+
+select * from tbl_employee 
+where birthday > '1975-01-01'
+and dpt_code != 10;
+
+select 
+code as 社員コード,
+name as 社員名,
+birthday as 生年月日
+from tbl_employee
+
+select * from tbl_employee
+ where post_code is null;
+ 
+ select * from tbl_employee
+ where post_code is not null;
+ 
+  select * from tbl_employee
+ where manager is not null
+ and post_code is null;
+
+select * from tbl_test 
+where code1 = 10 or code1 = 20 
+and code2 = 10 or code2 = 20;
+
+select * from tbl_test 
+where (code1 = 10 or code1 = 20)
+and (code2 = 10 or code2 = 20);

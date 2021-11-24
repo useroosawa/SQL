@@ -1,0 +1,34 @@
+create table tbl_hourly_pay (
+emp_code integer not null primary key,
+hourly_pay decimal);
+
+insert into tbl_hourly_pay values (103,500);
+insert into tbl_hourly_pay values (106,300);
+insert into tbl_hourly_pay values (107,6000);
+
+insert into tbl_employee(
+code,
+name,
+birthday,
+dpt_code,
+manager)
+select 
+p.code,
+p.name,
+p.birthday,
+p.dpt_code,
+p.manager
+from tbl_parttimer as p
+where p.code = 106;
+
+create table tbl_hourly_pay(
+emp_code integer not null primary key,
+hourly_pay numeric(14,0));
+
+select * from tbl_hourly_pay where
+exists(select e.code from tbl_employee as e where 
+e.code = code);
+
+select * from tbl_hourly_pay where
+emp_code = any(select e.code from tbl_employee as e where 
+hourly_pay != 500);

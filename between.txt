@@ -1,0 +1,10 @@
+select * from tbl_employee
+where (birthday >= 19700101)
+and (birthday <= 19791231)
+
+select * from tbl_employee
+where birthday between 19700101 and 19791231;
+
+
+select * from tbl_employee
+where dpt_code between 10 and 20;

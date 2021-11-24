@@ -1,0 +1,11 @@
+select * from tbl_employee 
+where dpt_code in(
+select code from tbl_department
+where name <> '総務部')
+order by code;
+
+select * from tbl_employee 
+where post_code in(
+select code from tbl_post
+where name != '課長')
+order by code;

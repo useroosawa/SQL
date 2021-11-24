@@ -1,0 +1,11 @@
+select 
+count(*)
+from 
+tbl_period
+where 
+(start_date <= 20050401
+and end_date >= 20050401)
+or (start_date <= 20060331
+and end_date >= 20060331)
+or (start_date >= 20060401
+and end_date <= 20070331);

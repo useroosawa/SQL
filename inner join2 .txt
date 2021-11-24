@@ -1,0 +1,48 @@
+select 
+a.code as emp_code,
+a.name as emp_name,
+b.code as post_code,
+b.name as post_name
+from
+tbl_employee as a
+ left outer join
+ tbl_post as b
+ on a.post_code = b.code
+ order by 
+ a.code;
+ 
+ select
+a.code as emp_code,
+a.name as emp_name,
+b.name as mrg_name
+from
+tbl_employee as a,
+tbl_employee as b
+where a.manager = b.code
+order by
+a.code;
+ 
+select
+a.code,
+a.name,
+a.manager,
+b.name
+from
+tbl_employee as a
+left outer join 
+tbl_employee as b
+on a.manager = b.code
+order by
+a.code;
+
+select
+a.code as emp_code,
+a.name as emp_name,
+b.name as mrg_name
+from
+tbl_employee as a
+inner join 
+tbl_employee as b
+on a.manager = b.code
+order by
+a.code;

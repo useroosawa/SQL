@@ -1,0 +1,23 @@
+delimiter //
+create function fnc_calc_tax(price int) returns int
+begin 
+declare tax int;
+select (price * 0.05)into tax;
+return tax;
+end //
+
+delimiter ;
+
+select fnc_calc_tax(100);
+
+
+delimiter //
+create function fnc_emp_table(emp_code int) returns int
+begin
+declare emp_code int;
+select code from tbl_employee where code = emp_code;
+return emp_code;
+end //
+delimiter ;
+
+select fnc_emp_table(117);

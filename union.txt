@@ -1,0 +1,44 @@
+select code, name, birthday from tbl_employee
+where birthday >=19750101
+order by code;
+
+select code, name, birthday from tbl_parttimer
+where birthday >=19750101
+order by code;
+
+select code, name, birthday from tbl_employee
+where birthday >=19750101
+union
+select code, name, birthday from tbl_parttimer
+where birthday >=19750101
+order by code;
+
+select code, name, birthday from tbl_employee
+where birthday >=19750101
+union all
+select code, name, birthday from tbl_parttimer
+where birthday >=19750101;
+--order by code;
+
+select code, name, birthday from tbl_parttimer
+where birthday >= 19750101
+union all
+select code, name, birthday from tbl_employee
+where birthday >= 19750101;
+
+--order by code;
+
+select code, name, birthday from tbl_employee
+where birthday >=19750101
+union
+select code, name, birthday from tbl_parttimer
+where birthday >=19750101
+union
+select code, name, birthday from tbl_emp_log
+where birthday >=19750101
+order by code;
+
+
+select code, name from tbl_post 
+union
+select code, name from tbl_department; 

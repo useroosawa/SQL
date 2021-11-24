@@ -1,0 +1,12 @@
+create table tbl_test (
+    id        INTEGER,
+    name      VARCHAR(40),
+    code1     INTEGER,
+    code2     INTEGER
+);
+
+/* tbl_testへデータ追加 */
+insert into tbl_test values (1,'一郎', 10, 30);
+insert into tbl_test values (2,'次郎', 20, 20);
+insert into tbl_test values (3,'三郎', 30, 10);
+

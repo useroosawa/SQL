@@ -1,0 +1,8 @@
+select distinct(dpt_code)from tbl_employee
+order by dpt_code asc;
+
+select distinct(post_code)from tbl_employee
+order by post_code asc;
+
+select distinct(manager)from tbl_employee
+order by manager asc;

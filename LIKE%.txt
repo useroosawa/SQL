@@ -1,0 +1,8 @@
+select * from tbl_employee
+where name like '田中%';
+
+select * from tbl_employee
+ where name like '___子';
+ 
+ select * from tbl_employee
+where birthday like '%02%';

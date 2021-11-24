@@ -1,0 +1,23 @@
+select * from tbl_employee as a, tbl_post as b
+where a.post_code = b.code
+order by a.dpt_code;
+
+select * from tbl_employee as a, tbl_post as b
+where (a.post_code = 3) and (a.post_code = b.code)
+order by a.dpt_code;
+
+select * from tbl_employee as a, tbl_post as b
+where a.post_code = b.code and a.post_code = 3
+order by a.dpt_code;
+
+select b.code,b.name,b.manager,a.name 
+from tbl_employee as a, tbl_employee as b
+where a.code = b.manager;
+
+select a.code, a.name, b.salary
+from tbl_employee as a, tbl_salary as b
+where a.code = b.emp_code;
+
+select b.code, a.name,b.name,a.code, c.name as manager
+from tbl_parttimer as a, tbl_department as b,tbl_employee as c
+where a.dpt_code = b.code and a.manager = c.manager;

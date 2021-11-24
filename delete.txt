@@ -1,0 +1,2 @@
+delete from tbl_employee 
+where code > 106

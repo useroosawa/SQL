@@ -1,0 +1,4 @@
+select b.code as dpt_code,b.name,a.code as emp_code,a.name as _emp_code
+from tbl_employee as a,tbl_department as b
+where a.dpt_code = b.code
+order by b.code,a.code;

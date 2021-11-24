@@ -1,0 +1,6 @@
+delimiter //
+create procedure prc_calc_tax(in price int, out tax int)
+begin select (price * 0.05)into tax;
+end//
+
+delimiter ;

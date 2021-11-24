@@ -1,0 +1,5 @@
+select * from tbl_employee 
+where dpt_code not in(
+select code from tbl_department
+where name <> '総務部')
+order by code;
